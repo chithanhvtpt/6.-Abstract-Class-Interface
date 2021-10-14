@@ -21,14 +21,16 @@ include_once('Square.php');
 //echo 'Rectangle area: ' . $square->calculateArea() . '<br />';
 //echo 'Rectangle perimeter: ' . $square->calculatePerimeter() . '<br />';
 
-$h[0] = new Circle('Circle', 0);
-$h[1] = new Cylinder('Cylinder',0, 5);
-$h[2]= new Rectangle('Rectangle',0, 5);
-$h[3] = new Square('Square', 0);
+$shape[0] = new Circle('Circle', 0);
+$shape[1] = new Cylinder('Cylinder',0, 5);
+$shape[2]= new Rectangle('Rectangle',0, 5);
+$shape[3] = new Square('Square', 0);
 
-foreach ($h as $hinh) {
-    echo $h;
-    if ($h instanceof Square) {
-        var_dump($h->howtoColor());
+//var_dump($shape);
+
+foreach ($shape as $key => $hinh) {
+//    var_dump($hinh);
+    if ($hinh instanceof Square) {
+        echo $hinh->howtoColor(). ' ';
     }
 }
